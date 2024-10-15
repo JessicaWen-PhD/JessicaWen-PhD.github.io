@@ -113,9 +113,53 @@ section h2 {
 }
 
 section p {
-    font-family: 'Optima', 'Verdana', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
     color: #666;
+}
+
+/* Projects Section - Side-Scrolling Gallery */
+.gallery-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 40px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensures padding is applied inside the container width */
+    text-align: center;
+    background-color: #f5f5f5; /* Optional: Add background color */
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    padding: 5px; /* Adds space around individual gallery items */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.gallery-container {
+    scroll-behavior: smooth;
 }
 
 /* Optional: Smooth scroll effect */
